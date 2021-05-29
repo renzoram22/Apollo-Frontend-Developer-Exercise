@@ -11,15 +11,15 @@
   <body>
     <div id="Mask" class="Mask">
       <div id="ColLeft" class="ColLeft">
-        <div id="firstStepNumber" class="container">
+        <div id="firstStepNumber" class="StepNumber">
           1
         </div>
         <svg id="secondStepLine" class="CustomLine"  width="20" height="0"><line x1="10" y1="1" x2="10" y2="200" stroke="#00c221"/></svg>
-        <div id="secondStepNumber" class="container Hide">
+        <div id="secondStepNumber" class="StepNumber Hide">
           2
         </div>
         <svg id="thirdStepLine" class="CustomLine" width="20" height="0"><line x1="10" y1="1" x2="10" y2="200" stroke="#00c221"/></svg>
-        <div id="thirdStepNumber" class="container Hide">
+        <div id="thirdStepNumber" class="StepNumber Hide">
           3
         </div>
       </div>
@@ -42,11 +42,11 @@
         </div>
         <br>
         <div class="OptionGroup">
-          <input type="radio" id="sms" name="Method" value="*** *** 3456">
+          <input type="radio" id="SMS" name="Method" value="*** *** 3456">
           <label for="sms">Text message (SMS)	<span class="Contact">*** *** 3456</span></label><br>
-          <input type="radio" id="voice" name="Method" value="*** *** 3456">
+          <input type="radio" id="VoiceCall" name="Method" value="*** *** 3456">
           <label for="voice">Voice call				<span class="Contact">*** *** 3456</span></label><br>
-          <input type="radio" id="email" name="Method" value="f****@iqvia.com">
+          <input type="radio" id="Email" name="Method" value="f****@iqvia.com">
           <label for="email">Email				<span class="Contact">	f****@iqvia.com</span></label><br>
         </div>
         <div class="SendButton" onclick="sendCode()" type="button" name="button">Send code</div>
@@ -69,12 +69,12 @@
     </div>
 
 
-    <div class="VerifyButton Disable" onclick="verifyCode()" id="VerifyButton">Verify</div>
+    <button class="VerifyButton Disable" onclick="verifyCode()" id="VerifyButton" disabled>Verify</button>
 
 
-    <div id="CodeModal" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
+    <div id="CodeModal" class="Modal">
+      <div class="ModalContent">
+        <span class="Close">&times;</span>
         <p>Your validation code is</p><span id="validationCodeNumber"></span>
     </div>
 

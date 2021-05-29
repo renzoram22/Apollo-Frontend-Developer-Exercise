@@ -1,3 +1,6 @@
+
+/* Animate the entrance of the mask */
+
 body {
   animation: fadeInAnimation ease 3s;
   animation-iteration-count: 1;
@@ -11,6 +14,38 @@ body {
         opacity: 1;
         }
 }
+
+
+label {
+  width: 124px;
+  height: 24px;
+  margin: 0 0 0 4px;
+  font-family: Ubuntu;
+  font-size: 16px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  color: #000000;
+}
+
+/* Container of all the elements */
+
+.Mask {
+  margin-right: auto;
+  margin-left: auto;
+  width: 400px;
+  height: 780px;
+  padding: 24px 24px 32px 24px;
+  border-radius: 4px;
+  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.04);
+  border: solid 1px #e9e9e9;
+  background-color: #ffffff;
+}
+
+/* Divide the Mask in two colums */
+
 .ColRight{
   width:90%;
   float:right
@@ -19,24 +54,16 @@ body {
   float:left
 }
 
+/* Style for every step */
+
 .Step{
   margin-bottom:5vh;
 }
 .StepHeader{
   display:flex;
 }
-.Mask {
-  margin-right: auto;
-  margin-left: auto;
-  width: 400px;
-  height: 728px;
-  padding: 24px 24px 32px 24px;
-  border-radius: 4px;
-  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.04);
-  border: solid 1px #e9e9e9;
-  background-color: #ffffff;
-}
-.container {
+
+.StepNumber {
   font-family: Ubuntu;
   font-size: 16px;
   font-weight: 600;
@@ -64,31 +91,18 @@ body {
   letter-spacing: normal;
   color: #595959;
 }
-label {
-  width: 124px;
-  height: 24px;
-  margin: 0 0 0 4px;
-  font-family: Ubuntu;
-  font-size: 16px;
-  font-weight: 500;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.5;
-  letter-spacing: normal;
-  color: #000000;
-}
 .checkbox {
   width: 10px;
   height: 10px;
   border-radius: 8px;
   background-color: #0768fd;
 }
-.OptionGroup{
-
-}
 .Contact{
   float:right;
 }
+
+/* Styling Button from Zero */
+
 .SendButton{
   margin-top:2vh;
   font-family: Ubuntu;
@@ -183,22 +197,22 @@ label {
 .CustomLine{
   transition: .4s all linear;
 }
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+.Modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
   font-family: Ubuntu;
 }
 
 /* Modal Content/Box */
-.modal-content {
+.ModalContent {
   text-align: center;
   border-radius: 25px;
   background-color: #fefefe;
@@ -208,20 +222,19 @@ label {
   width: 20%; /* Could be more or less, depending on screen size */
 }
 
-.modal-content span{
+.ModalContent span{
   font-weight: 600;
 }
 
 /* The Close Button */
-.close {
+.Close {
   color: #aaa;
   float: right;
-  font-size: 28px;
   font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
+.Close:hover,
+.Close:focus {
   color: black;
   text-decoration: none;
   cursor: pointer;
@@ -270,21 +283,4 @@ label {
   background-color: #f44336; /* Red */
   color: white;
   margin-bottom: 15px;
-}
-
-/* The close button */
-.closebtn {
-  margin-left: 15px;
-  color: white;
-  font-weight: bold;
-  float: right;
-  font-size: 22px;
-  line-height: 20px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-/* When moving the mouse over the close button */
-.closebtn:hover {
-  color: black;
 }
